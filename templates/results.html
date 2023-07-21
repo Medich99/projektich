@@ -1,0 +1,58 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    <p>Sequence 1: {{ sequence1 }}</p>
+    <p>Sequence 2: {{ sequence2 }}</p>
+    <p>Similarity Percentage: {{ similarity_percentage }}%</p>
+    <!-- You can add more details or visualizations related to the analysis results if desired -->
+</body>
+</html>
+
+<!-- ... Your other HTML code ... -->
+
+{% if sequence1_character_counts %}
+  <h3>Character Counts for Sequence 1:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Character</th>
+        <th>Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for character, count in sequence1_character_counts.items() %}
+        <tr>
+          <td>{{ character }}</td>
+          <td>{{ count }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+{% if sequence2_character_counts %}
+  <h3>Character Counts for Sequence 2:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Character</th>
+        <th>Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for character, count in sequence2_character_counts.items() %}
+        <tr>
+          <td>{{ character }}</td>
+          <td>{{ count }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+<!-- ... Your other HTML code ... -->
