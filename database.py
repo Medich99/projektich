@@ -20,7 +20,7 @@ def add_example_sequences():
         {"name": "major histocompatibility complex, class I, B", "sequence": "AGAGTCTCCTCAGACGCCGAGATGCTGGTCATGGCGCCCCGAACCGTCCTCCTGCTGCTCTCGGCGGCCCTGGCCCTGACCGAGACCTGGGCCGGTGAGTGCGGGTCGGGAGGGAAATGGCCTCTGCCGGGAGGAGCGAGGGGACCGCAGGCGGGGGCGCAGGACCTGAGGAGCCGCGCCGGGAGGAGGGTCGGGCGGGTCTCAGCCCCTCCTCACCCCCAGGCTCCCACTCCATGAGGTATTTCTACACCTCCGTGTCCCGGCCCGGCCGCGGGGAGCCCCGCTTCATCTCAGTGGGCTACGTGGACGACACCCAGTTCGTGAGGTTCGACAGCGACGCCGCGAGTCCGAGAGAGGAGCCGCGGGCGCCGTGGATAGAGCAGGAGGGGCCGGAGTATTGGGACCGGAACACACAGATCTACAAGGCCCAGGCACAGACTGACCGAGAGAGCCTGCGGAACCTGCGCGGCTACTACAACCAGAGCGAGGCCGGTGAGTGACCCCGGCCCGGGGCGCAGGTCACGACTCCCCATCCCCCACGTACGGCCCGGGTCGCCCCG"},
 
 
-        # Add more example sequences as needed
+        # moze jos examples
     ]
 
     for seq_data in example_sequences:
@@ -51,3 +51,11 @@ if __name__ == '__main__':
 
         # Add example sequences to the database
         add_example_sequences()
+
+from collections import Counter
+
+def count_sequence_characters(sequence):
+    # Use the Counter class from collections to count occurrences of each character
+    character_counts = Counter(sequence)
+    return character_counts
+
